@@ -1,8 +1,10 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Navbar from './components/navbar'
+import './globals.css';
+import { Inter } from 'next/font/google';
+import Navbar from './components/navbar';
+import Header from './components/header';
+import Hero from './components/hero';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Arckie Zeth Jadulco',
@@ -17,7 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar></Navbar>
+        {/* Header */}
+        <Header />
+        <section id="hero">
+          <Hero />
+        </section>
         {children}
         </body>
     </html>
